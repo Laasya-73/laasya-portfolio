@@ -10,7 +10,7 @@ return {
 	assets: new Set(["images/laasya-profile.jpg"]),
 	mimeTypes: {".jpg":"image/jpeg"},
 	_: {
-		client: {start:"_app/immutable/entry/start.DoJMGdnl.js",app:"_app/immutable/entry/app.NUUnX7jH.js",imports:["_app/immutable/entry/start.DoJMGdnl.js","_app/immutable/chunks/DdxZ2QEI.js","_app/immutable/chunks/B9KDnH5_.js","_app/immutable/chunks/BEKbuCpL.js","_app/immutable/chunks/B6Md4e3Q.js","_app/immutable/entry/app.NUUnX7jH.js","_app/immutable/chunks/B9KDnH5_.js","_app/immutable/chunks/Burq3eiQ.js","_app/immutable/chunks/B9UwLnOP.js","_app/immutable/chunks/B6Md4e3Q.js","_app/immutable/chunks/D8X2VQXV.js","_app/immutable/chunks/BJjRuV8f.js","_app/immutable/chunks/B2JLYjYv.js","_app/immutable/chunks/BEKbuCpL.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
+		client: {start:"_app/immutable/entry/start.DIGibuu6.js",app:"_app/immutable/entry/app.2i0F6gtV.js",imports:["_app/immutable/entry/start.DIGibuu6.js","_app/immutable/chunks/Dq33Mlhv.js","_app/immutable/chunks/B9KDnH5_.js","_app/immutable/chunks/BEKbuCpL.js","_app/immutable/chunks/B6Md4e3Q.js","_app/immutable/entry/app.2i0F6gtV.js","_app/immutable/chunks/B9KDnH5_.js","_app/immutable/chunks/Burq3eiQ.js","_app/immutable/chunks/B9UwLnOP.js","_app/immutable/chunks/B6Md4e3Q.js","_app/immutable/chunks/D8X2VQXV.js","_app/immutable/chunks/BJjRuV8f.js","_app/immutable/chunks/B2JLYjYv.js","_app/immutable/chunks/BEKbuCpL.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
