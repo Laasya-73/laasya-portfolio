@@ -1,0 +1,5 @@
+{
+  "framework": "sveltekit",
+  "installCommand": "npm ci",
+  "buildCommand": "node ./node_modules/vite/bin/vite.js build"
+}
