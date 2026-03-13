@@ -1420,11 +1420,24 @@ a:focus-visible {
 
 @media (max-width: 1030px) {
   .topbar-inner {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     align-items: start;
     gap: 0.75rem;
     min-height: unset;
     padding: 0.9rem 0;
+  }
+
+  .desktop-nav,
+  .top-actions {
+    width: 100%;
+    justify-content: flex-start;
+    justify-self: start;
+  }
+
+  .top-actions {
+    border-left: 0;
+    padding-left: 0;
   }
 
   .layout {
@@ -1481,7 +1494,7 @@ a:focus-visible {
 
   .top-actions {
     border-left: 0;
-    padding-left: 0.8rem;
+    padding-left: 0;
   }
 
   .content-section {
