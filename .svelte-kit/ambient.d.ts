@@ -50,12 +50,6 @@ declare module '$env/static/private' {
 	export const CommonProgramW6432: string;
 	export const COMPUTERNAME: string;
 	export const ComSpec: string;
-	export const CONDA_DEFAULT_ENV: string;
-	export const CONDA_EXE: string;
-	export const CONDA_PREFIX: string;
-	export const CONDA_PROMPT_MODIFIER: string;
-	export const CONDA_PYTHON_EXE: string;
-	export const CONDA_SHLVL: string;
 	export const DEBUG: string;
 	export const DriverData: string;
 	export const EDITOR: string;
@@ -65,14 +59,18 @@ declare module '$env/static/private' {
 	export const EFC_8352_2775293581: string;
 	export const EFC_8352_3789132940: string;
 	export const ELECTRON_RUN_AS_NODE: string;
+	export const GIT_CONFIG_COUNT: string;
+	export const GIT_CONFIG_KEY_0: string;
+	export const GIT_CONFIG_VALUE_0: string;
+	export const GIT_PAGER: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
 	export const HOMEPATH: string;
 	export const INIT_CWD: string;
+	export const LESS: string;
 	export const LOCALAPPDATA: string;
 	export const LOGONSERVER: string;
 	export const NODE: string;
-	export const NODE_ENV: string;
 	export const NODE_EXE: string;
 	export const NPM_CLI_JS: string;
 	export const npm_command: string;
@@ -101,6 +99,7 @@ declare module '$env/static/private' {
 	export const OneDrive: string;
 	export const OneDriveConsumer: string;
 	export const OS: string;
+	export const PAGER: string;
 	export const PATH: string;
 	export const PATHEXT: string;
 	export const PROCESSOR_ARCHITECTURE: string;
@@ -119,8 +118,6 @@ declare module '$env/static/private' {
 	export const RTOOLS45_HOME: string;
 	export const RUST_LOG: string;
 	export const SESSIONNAME: string;
-	export const SSL_CERT_DIR: string;
-	export const SSL_CERT_FILE: string;
 	export const SystemDrive: string;
 	export const SystemRoot: string;
 	export const TEMP: string;
@@ -139,10 +136,6 @@ declare module '$env/static/private' {
 	export const VSCODE_PID: string;
 	export const windir: string;
 	export const ZES_ENABLE_SYSMAN: string;
-	export const _CONDA_EXE: string;
-	export const _CONDA_ROOT: string;
-	export const __CONDA_OPENSSL_CERT_DIR_SET: string;
-	export const __CONDA_OPENSSL_CERT_FILE_SET: string;
 }
 
 /**
@@ -241,12 +234,6 @@ declare module '$env/dynamic/private' {
 		CommonProgramW6432: string;
 		COMPUTERNAME: string;
 		ComSpec: string;
-		CONDA_DEFAULT_ENV: string;
-		CONDA_EXE: string;
-		CONDA_PREFIX: string;
-		CONDA_PROMPT_MODIFIER: string;
-		CONDA_PYTHON_EXE: string;
-		CONDA_SHLVL: string;
 		DEBUG: string;
 		DriverData: string;
 		EDITOR: string;
@@ -256,14 +243,18 @@ declare module '$env/dynamic/private' {
 		EFC_8352_2775293581: string;
 		EFC_8352_3789132940: string;
 		ELECTRON_RUN_AS_NODE: string;
+		GIT_CONFIG_COUNT: string;
+		GIT_CONFIG_KEY_0: string;
+		GIT_CONFIG_VALUE_0: string;
+		GIT_PAGER: string;
 		HOME: string;
 		HOMEDRIVE: string;
 		HOMEPATH: string;
 		INIT_CWD: string;
+		LESS: string;
 		LOCALAPPDATA: string;
 		LOGONSERVER: string;
 		NODE: string;
-		NODE_ENV: string;
 		NODE_EXE: string;
 		NPM_CLI_JS: string;
 		npm_command: string;
@@ -292,6 +283,7 @@ declare module '$env/dynamic/private' {
 		OneDrive: string;
 		OneDriveConsumer: string;
 		OS: string;
+		PAGER: string;
 		PATH: string;
 		PATHEXT: string;
 		PROCESSOR_ARCHITECTURE: string;
@@ -310,8 +302,6 @@ declare module '$env/dynamic/private' {
 		RTOOLS45_HOME: string;
 		RUST_LOG: string;
 		SESSIONNAME: string;
-		SSL_CERT_DIR: string;
-		SSL_CERT_FILE: string;
 		SystemDrive: string;
 		SystemRoot: string;
 		TEMP: string;
@@ -330,10 +320,6 @@ declare module '$env/dynamic/private' {
 		VSCODE_PID: string;
 		windir: string;
 		ZES_ENABLE_SYSMAN: string;
-		_CONDA_EXE: string;
-		_CONDA_ROOT: string;
-		__CONDA_OPENSSL_CERT_DIR_SET: string;
-		__CONDA_OPENSSL_CERT_FILE_SET: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
 	}
