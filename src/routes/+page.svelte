@@ -58,7 +58,6 @@
 
 <svelte:head>
   <title>{profile.name}</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon-home.svg" />
   <meta
     name="description"
     content="Portfolio of Laasya Priya Vemuri: applied AI systems, research, and teaching."

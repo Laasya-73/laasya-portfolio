@@ -4,7 +4,6 @@
 
 <svelte:head>
   <title>Teaching | Laasya Priya Vemuri</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon-teaching.svg" />
   <meta
     name="description"
     content="Teaching and mentoring work of Laasya Priya Vemuri at Illinois Institute of Technology."

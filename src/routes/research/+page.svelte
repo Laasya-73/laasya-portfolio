@@ -4,7 +4,6 @@
 
 <svelte:head>
   <title>Research | Laasya Priya Vemuri</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon-research.svg" />
   <meta
     name="description"
     content="Work and projects by Laasya Priya Vemuri, focused on applied AI systems and machine learning."

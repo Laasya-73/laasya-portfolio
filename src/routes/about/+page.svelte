@@ -30,7 +30,6 @@
 
 <svelte:head>
   <title>About | Laasya Priya Vemuri</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon-about.svg" />
   <meta
     name="description"
     content="About Laasya Priya Vemuri - graduate student in Computer Science and Mathematics at Illinois Institute of Technology."
