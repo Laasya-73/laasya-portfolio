@@ -4,10 +4,13 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
+    "generate:build-meta": "node scripts/generate-build-meta.mjs",
+    "predev": "npm run generate:build-meta",
+    "prebuild": "npm run generate:build-meta",
     "dev": "vite dev",
     "build": "node ./node_modules/vite/bin/vite.js build",
     "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+    "check": "npm run generate:build-meta && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
   "engines": {
     "node": ">=20 <23"

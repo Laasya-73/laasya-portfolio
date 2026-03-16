@@ -19,6 +19,3 @@ pnpm-debug.log*
 # OS/editor artifacts
 .DS_Store
 Thumbs.db
-
-# Personal assets
-static/images/laasya-profile.jpg

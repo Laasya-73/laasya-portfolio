@@ -1,12 +1,25 @@
 <script lang="ts">
   import { profile } from '$lib/data/site';
+  import { LAST_UPDATED_ISO } from '$lib/generated/build-meta';
+
+  const formatLastUpdated = (iso: string) => {
+    const date = new Date(iso);
+    if (Number.isNaN(date.getTime())) return 'Recently';
+
+    const month = date.toLocaleString('en-US', { month: 'long' });
+    const day = date.getDate();
+    const year = String(date.getFullYear()).slice(-2);
+    return `${month} ${day}, '${year}`;
+  };
+
+  const lastUpdatedLabel = formatLastUpdated(LAST_UPDATED_ISO);
 </script>
 
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-meta">
       <p class="footer-copy"><span class="credit-icon" aria-hidden="true">&copy;</span> 2026 | Laasya Priya Vemuri</p>
-      <p class="footer-updated">Last updated March 12, '26</p>
+      <p class="footer-updated">Last updated {lastUpdatedLabel}</p>
     </div>
 
     <div class="footer-actions" aria-label="Footer social links">
