@@ -40,6 +40,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/" | "/about" | "/projects" | "/research" | "/teaching";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/images/laasya-profile.jpg" | string & {};
+		Asset(): "/favicon.svg" | "/images/laasya-profile.jpg" | string & {};
 	}
 }

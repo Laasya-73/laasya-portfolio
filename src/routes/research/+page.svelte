@@ -83,6 +83,33 @@
       <article class="project-entry">
         <div class="project-entry-head">
           <span class="project-number">2.</span>
+          <span class="project-state">Live</span>
+          <span class="project-kind">Productivity AI Application</span>
+        </div>
+        <h3>Voice-to-Action Productivity Assistant</h3>
+        <p>
+          This project is an AI-powered web application that converts spoken ideas into structured
+          productivity workflows. Users can record or upload voice notes, and the system
+          automatically transforms the audio into actionable items such as tasks, reminders,
+          calendar events, notes, or ideas.
+        </p>
+        <p>
+          The goal of the application is to bridge the gap between unstructured voice input and
+          structured productivity systems, enabling users to quickly capture thoughts and turn them
+          into organized actions.
+        </p>
+        <p class="project-link-row">
+          <span>Live Tool:</span>
+          <a href="https://voicetoaction.vercel.app/" target="_blank" rel="noreferrer">
+            Voice-to-Action &rarr;
+          </a>
+        </p>
+      </article>
+    </li>
+    <li>
+      <article class="project-entry">
+        <div class="project-entry-head">
+          <span class="project-number">3.</span>
           <span class="project-state">Research</span>
           <span class="project-kind">Build Fellowship Project</span>
         </div>
