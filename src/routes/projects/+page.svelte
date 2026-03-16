@@ -14,6 +14,7 @@
 
 <svelte:head>
   <title>Projects | Laasya Priya Vemuri</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon-projects.svg" />
   <meta
     name="description"
     content="Projects by Laasya Priya Vemuri, including ForecastLens AI and applied machine learning research work."
