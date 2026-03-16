@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { onDestroy, onMount } from 'svelte';
   import { profile, toolCards } from '$lib/data/site';
 
@@ -171,4 +171,5 @@
     <a href={profile.linkedin} target="_blank" rel="noreferrer">Talk AI</a>
   </p>
 </section>
+
 
