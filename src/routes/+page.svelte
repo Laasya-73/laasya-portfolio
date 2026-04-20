@@ -141,7 +141,7 @@
       <ul class="timeline-points">
         <li>
           Contributed to the
-          <a href="https://qmcpy.org/" target="_blank" rel="noreferrer">QMCPy</a>
+          <a href="https://qmcpy.org/author/lvemuri1hawk-illinoistech-edu/" target="_blank" rel="noreferrer">QMCPy</a>
           open-source library, extending the True Measure class to support dependent distributions
           through improvements to the SciPy wrapper integration.
         </li>

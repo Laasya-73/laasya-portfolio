@@ -110,6 +110,34 @@
       <article class="project-entry">
         <div class="project-entry-head">
           <span class="project-number">3.</span>
+          <span class="project-state">Live</span>
+          <span class="project-kind">AI Decision System</span>
+        </div>
+        <h3>LaunchVerdict AI - Startup Idea Critic</h3>
+        <p>
+          An AI-powered web app that evaluates startup ideas and converts them into structured
+          venture insights. It scores ideas across problem strength, differentiation, monetization,
+          and execution.
+        </p>
+        <p>
+          The platform highlights risks, suggests focused pivots, and includes a Brutal Honesty
+          Mode for direct, no-sugarcoating feedback.
+        </p>
+        <p>
+          Built to help founders quickly validate and refine ideas before building.
+        </p>
+        <p class="project-link-row">
+          <span>Live Tool:</span>
+          <a href="https://launchverdictai.vercel.app/" target="_blank" rel="noreferrer">
+            LaunchVerdict AI &rarr;
+          </a>
+        </p>
+      </article>
+    </li>
+    <li>
+      <article class="project-entry">
+        <div class="project-entry-head">
+          <span class="project-number">4.</span>
           <span class="project-state">Research</span>
           <span class="project-kind">Build Fellowship Project</span>
         </div>

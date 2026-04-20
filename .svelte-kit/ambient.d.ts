@@ -40,7 +40,6 @@
 declare module '$env/static/private' {
 	export const ALLUSERSPROFILE: string;
 	export const APPDATA: string;
-	export const APPLICATION_INSIGHTS_NO_STATSBEAT: string;
 	export const CHROME_CRASHPAD_PIPE_NAME: string;
 	export const CODEX_INTERNAL_ORIGINATOR_OVERRIDE: string;
 	export const CODEX_SANDBOX_NETWORK_DISABLED: string;
@@ -53,11 +52,11 @@ declare module '$env/static/private' {
 	export const DEBUG: string;
 	export const DriverData: string;
 	export const EDITOR: string;
-	export const EFC_19300_1262719628: string;
-	export const EFC_19300_1592913036: string;
-	export const EFC_19300_2283032206: string;
-	export const EFC_19300_2775293581: string;
-	export const EFC_19300_3789132940: string;
+	export const EFC_9276_1262719628: string;
+	export const EFC_9276_1592913036: string;
+	export const EFC_9276_2283032206: string;
+	export const EFC_9276_2775293581: string;
+	export const EFC_9276_3789132940: string;
 	export const ELECTRON_RUN_AS_NODE: string;
 	export const FPS_BROWSER_APP_PROFILE_STRING: string;
 	export const FPS_BROWSER_USER_PROFILE_STRING: string;
@@ -226,7 +225,6 @@ declare module '$env/dynamic/private' {
 	export const env: {
 		ALLUSERSPROFILE: string;
 		APPDATA: string;
-		APPLICATION_INSIGHTS_NO_STATSBEAT: string;
 		CHROME_CRASHPAD_PIPE_NAME: string;
 		CODEX_INTERNAL_ORIGINATOR_OVERRIDE: string;
 		CODEX_SANDBOX_NETWORK_DISABLED: string;
@@ -239,11 +237,11 @@ declare module '$env/dynamic/private' {
 		DEBUG: string;
 		DriverData: string;
 		EDITOR: string;
-		EFC_19300_1262719628: string;
-		EFC_19300_1592913036: string;
-		EFC_19300_2283032206: string;
-		EFC_19300_2775293581: string;
-		EFC_19300_3789132940: string;
+		EFC_9276_1262719628: string;
+		EFC_9276_1592913036: string;
+		EFC_9276_2283032206: string;
+		EFC_9276_2775293581: string;
+		EFC_9276_3789132940: string;
 		ELECTRON_RUN_AS_NODE: string;
 		FPS_BROWSER_APP_PROFILE_STRING: string;
 		FPS_BROWSER_USER_PROFILE_STRING: string;

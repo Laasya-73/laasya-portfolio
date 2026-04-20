@@ -114,46 +114,6 @@ export const toolCards: ToolItem[] = [
   }
 ];
 
-export const papers: PaperItem[] = [
-  {
-    status: 'Published',
-    title: 'Coloring of Graphs Avoiding Bicolored Paths of a Fixed Length',
-    authors: 'Kirtisoglu, A. and Ozkahya, L.',
-    venue: 'Graphs and Combinatorics, 40(1), 2024',
-    summary:
-      'Studies proper vertex colorings that avoid bicolored paths of fixed length and establishes sharp bounds in multiple graph regimes.',
-    links: [
-      {
-        label: 'Journal',
-        href: 'https://link.springer.com/article/10.1007/s00373-023-02759-8'
-      }
-    ]
-  },
-  {
-    status: 'In Progress',
-    title: 'Optimization-Based Decision Support for Equitable Healthcare Access',
-    authors: 'Kaul, H. and Vemuri, L.P.',
-    venue: 'Research manuscript in preparation',
-    summary:
-      'Designing an optimization-oriented healthcare accessibility framework with interactive mapping for Chicago communities.',
-    links: [
-      {
-        label: 'Project Tool',
-        href: 'https://forecaststudio.lovable.app/'
-      }
-    ]
-  },
-  {
-    status: 'In Progress',
-    title: 'A Sampling Method for Districting and Hierarchical Facility Location',
-    authors: 'Kaul, H. and research collaborators',
-    venue: 'Methodological research in progress',
-    summary:
-      'Developing scalable sampling methods for districting and hierarchical facility location under structural constraints.',
-    links: []
-  }
-];
-
 export const projects: ProjectItem[] = [
   {
     title: 'ForecastLens AI - Explainable Time Series Forecasting Platform',
