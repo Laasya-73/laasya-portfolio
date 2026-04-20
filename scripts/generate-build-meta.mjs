@@ -22,11 +22,36 @@ const runGit = (args) => {
   }
 };
 
+const normalizeIsoDate = (value) => {
+  if (!value) return '';
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return '';
+  return date.toISOString();
+};
+
 const existingDateISO = readExistingValue('LAST_UPDATED_ISO');
 const existingSha = readExistingValue('COMMIT_SHA');
 
-const commitDateISO = runGit(['log', '-1', '--format=%cI']) || existingDateISO || new Date().toISOString();
-const commitSha = runGit(['rev-parse', '--short', 'HEAD']) || existingSha || 'local';
+const envSha =
+  process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7) ||
+  process.env.GITHUB_SHA?.slice(0, 7) ||
+  '';
+const envDate = normalizeIsoDate(
+  process.env.VERCEL_GIT_COMMIT_DATE ||
+  process.env.VERCEL_GIT_COMMIT_TIMESTAMP ||
+  process.env.GITHUB_EVENT_HEAD_COMMIT_TIMESTAMP ||
+  ''
+);
+
+const gitSha = runGit(['rev-parse', '--short', 'HEAD']);
+const gitDate = normalizeIsoDate(runGit(['log', '-1', '--format=%cI']));
+
+const commitSha = gitSha || envSha || existingSha || 'local';
+const shaChanged = Boolean(existingSha) && commitSha !== existingSha;
+
+const commitDateISO = shaChanged
+  ? gitDate || envDate || new Date().toISOString()
+  : existingDateISO || gitDate || envDate || new Date().toISOString();
 
 mkdirSync(dirname(outputFile), { recursive: true });
 
