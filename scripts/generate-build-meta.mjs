@@ -1,18 +1,8 @@
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 
 const outputFile = resolve('src/lib/generated/build-meta.ts');
-
-const readExistingValue = (name) => {
-  try {
-    const current = readFileSync(outputFile, 'utf8');
-    const regex = new RegExp(`export const ${name} = "([^"]+)";`);
-    return current.match(regex)?.[1] ?? '';
-  } catch {
-    return '';
-  }
-};
 
 const runGit = (args) => {
   try {
@@ -29,9 +19,6 @@ const normalizeIsoDate = (value) => {
   return date.toISOString();
 };
 
-const existingDateISO = readExistingValue('LAST_UPDATED_ISO');
-const existingSha = readExistingValue('COMMIT_SHA');
-
 const envSha =
   process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7) ||
   process.env.GITHUB_SHA?.slice(0, 7) ||
@@ -46,12 +33,8 @@ const envDate = normalizeIsoDate(
 const gitSha = runGit(['rev-parse', '--short', 'HEAD']);
 const gitDate = normalizeIsoDate(runGit(['log', '-1', '--format=%cI']));
 
-const commitSha = gitSha || envSha || existingSha || 'local';
-const shaChanged = Boolean(existingSha) && commitSha !== existingSha;
-
-const commitDateISO = shaChanged
-  ? gitDate || envDate || new Date().toISOString()
-  : existingDateISO || gitDate || envDate || new Date().toISOString();
+const commitSha = gitSha || envSha || 'local';
+const commitDateISO = gitDate || envDate || new Date().toISOString();
 
 mkdirSync(dirname(outputFile), { recursive: true });
 
