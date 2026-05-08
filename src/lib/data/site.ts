@@ -19,6 +19,9 @@ export type ToolItem = {
   subtitle: string;
   description: string;
   status: string;
+  statusNote?: string;
+  tags?: string[];
+  ctaLabel?: string;
   href?: string;
 };
 
@@ -94,7 +97,7 @@ export const profile = {
   school: 'Illinois Institute of Technology',
   schoolUrl: 'https://www.iit.edu/',
   universityEmail: 'lvemuri1@hawk.illinoistech.edu',
-  email: 'laasyasrinivas2001@gmail.com',
+  email: 'vlaasyapriya77@gmail.com',
   github: 'https://github.com/Laasya-73',
   linkedin: 'https://www.linkedin.com/in/laasya-priya-vemuri',
   photo: '/images/laasya-profile.jpg',
@@ -109,8 +112,12 @@ export const toolCards: ToolItem[] = [
     title: 'AI Infrastructure Impact Dashboard',
     subtitle: '',
     description:
-      'Interactive geospatial dashboard analyzing the environmental and community impact of AI data centers. Combines environmental indicators, infrastructure datasets, and regional context to explore how large-scale computing infrastructure affects surrounding communities.',
-    status: 'ONGOING RESEARCH'
+      'Interactive geospatial platform exploring the environmental and community impact of large-scale AI infrastructure and data center development across Illinois.',
+    status: 'ONGOING RESEARCH',
+    statusNote: 'SoReMo Research Fellowship',
+    tags: ['AI Infrastructure', 'Geospatial Analysis', 'Infrastructure Mapping'],
+    ctaLabel: 'Explore Platform',
+    href: 'https://people-v-ai.vercel.app/'
   }
 ];
 
@@ -144,7 +151,7 @@ export const projects: ProjectItem[] = [
     ],
     links: [
       { label: 'Open Research Page', href: '/research#papers' },
-      { label: 'Email for Collaboration', href: 'mailto:laasyasrinivas2001@gmail.com' }
+      { label: 'Email for Collaboration', href: 'mailto:vlaasyapriya77@gmail.com' }
     ]
   }
 ];
@@ -231,8 +238,8 @@ export const researchInterests: ResearchInterestItem[] = [
 export const contactLinks: ContactLink[] = [
   {
     label: 'Email',
-    href: 'mailto:laasyasrinivas2001@gmail.com',
-    display: 'laasyasrinivas2001@gmail.com'
+    href: 'mailto:vlaasyapriya77@gmail.com',
+    display: 'vlaasyapriya77@gmail.com'
   },
   {
     label: 'LinkedIn',

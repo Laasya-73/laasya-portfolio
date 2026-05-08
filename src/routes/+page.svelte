@@ -94,8 +94,7 @@
 </section>
 
 <section id="tools" class="content-section">
-  <p class="eyebrow eyebrow-full">Interactive Tools</p>
-  <h2 class="section-title-compact">Current Work</h2>
+  <p class="eyebrow eyebrow-full">Research Spotlight</p>
   <div class="tool-grid">
     {#each toolCards as tool}
       <article class="tool-card">
@@ -104,12 +103,33 @@
           <p class="item-meta">{tool.subtitle}</p>
         {/if}
         <p>{tool.description}</p>
-        {#if tool.href}
-          <a href={tool.href} target={opensInNewTab(tool.href) ? '_blank' : undefined} rel="noreferrer">
-            {tool.status}
-          </a>
-        {:else}
+
+        {#if tool.tags?.length}
+          <div class="about-chip-row">
+            {#each tool.tags as tag}
+              <span class="about-chip">{tag}</span>
+            {/each}
+          </div>
+        {/if}
+
+        {#if tool.href && tool.ctaLabel}
+          <p class="tool-cta-row">
+            <a href={tool.href} target={opensInNewTab(tool.href) ? '_blank' : undefined} rel="noreferrer">
+              {tool.ctaLabel} ↗
+            </a>
+          </p>
+        {/if}
+
+        <div class="tool-status-row">
           <span class="status-pill">{tool.status}</span>
+          {#if tool.statusNote}
+            <span class="tool-status-note">{tool.statusNote}</span>
+          {/if}
+        </div>
+        {#if tool.href && !tool.ctaLabel}
+          <a href={tool.href} target={opensInNewTab(tool.href) ? '_blank' : undefined} rel="noreferrer">
+            Explore &rarr;
+          </a>
         {/if}
       </article>
     {/each}
@@ -141,7 +161,7 @@
       <ul class="timeline-points">
         <li>
           Contributed to the
-          <a href="https://qmcpy.org/author/lvemuri1hawk-illinoistech-edu/" target="_blank" rel="noreferrer">QMCPy</a>
+          <a href="https://qmcpy.org/2026/04/18/extending-scipywrapper-of-qmcpy-to-support-dependent-and-custom-distributions/" target="_blank" rel="noreferrer">QMCPy</a>
           open-source library, extending the True Measure class to support dependent distributions
           through improvements to the SciPy wrapper integration.
         </li>
@@ -171,5 +191,3 @@
     <a href={profile.linkedin} target="_blank" rel="noreferrer">Talk AI</a>
   </p>
 </section>
-
-

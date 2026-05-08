@@ -490,6 +490,10 @@ a {
   margin-bottom: 0.42rem;
 }
 
+#tools .section-title-compact {
+  color: #7c3aed;
+}
+
 .availability {
   display: inline-flex;
   gap: 0.45rem;
@@ -658,6 +662,53 @@ a {
 
 .status-pill {
   color: #12b76a;
+}
+
+.tool-status-row {
+  display: flex;
+  align-items: center;
+  gap: 0.52rem;
+  margin-top: 0.38rem;
+  flex-wrap: wrap;
+}
+
+.tool-status-row .status-pill {
+  margin-top: 0;
+}
+
+.tool-status-note {
+  color: #f59e0b;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.tool-status-note::before {
+  content: '•';
+  color: #9aa4b8;
+  margin: 0 0.45rem 0 0.1rem;
+}
+
+.tool-cta-row {
+  margin-top: 0.46rem;
+}
+
+.tool-cta-row a {
+  color: #9333ea;
+  font-weight: 700;
+}
+
+:root[data-theme='dark'] .tool-status-note {
+  color: #fbbf24;
+}
+
+:root[data-theme='dark'] .tool-cta-row a {
+  color: #d8b4fe;
+}
+
+:root[data-theme='dark'] #tools .section-title-compact {
+  color: #c4b5fd;
 }
 
 .timeline {
