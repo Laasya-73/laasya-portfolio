@@ -40,8 +40,10 @@
 declare module '$env/static/private' {
 	export const ALLUSERSPROFILE: string;
 	export const APPDATA: string;
+	export const BROWSER_USE_AVAILABLE_BACKENDS: string;
 	export const CHROME_CRASHPAD_PIPE_NAME: string;
 	export const CODEX_INTERNAL_ORIGINATOR_OVERRIDE: string;
+	export const CODEX_PERMISSION_PROFILE: string;
 	export const CODEX_SANDBOX_NETWORK_DISABLED: string;
 	export const CODEX_THREAD_ID: string;
 	export const COLOR: string;
@@ -52,14 +54,13 @@ declare module '$env/static/private' {
 	export const DEBUG: string;
 	export const DriverData: string;
 	export const EDITOR: string;
-	export const EFC_10612_1262719628: string;
-	export const EFC_10612_1592913036: string;
-	export const EFC_10612_2283032206: string;
-	export const EFC_10612_2397410445: string;
-	export const EFC_10612_2775293581: string;
-	export const EFC_10612_2946480783: string;
-	export const EFC_10612_3789132940: string;
-	export const EFC_10612_4126798990: string;
+	export const EFC_10264_1262719628: string;
+	export const EFC_10264_1592913036: string;
+	export const EFC_10264_2283032206: string;
+	export const EFC_10264_2775293581: string;
+	export const EFC_10264_2946480783: string;
+	export const EFC_10264_3789132940: string;
+	export const EFC_10264_4126798990: string;
 	export const ELECTRON_RUN_AS_NODE: string;
 	export const FPS_BROWSER_APP_PROFILE_STRING: string;
 	export const FPS_BROWSER_USER_PROFILE_STRING: string;
@@ -76,6 +77,8 @@ declare module '$env/static/private' {
 	export const LOGONSERVER: string;
 	export const NODE: string;
 	export const NODE_EXE: string;
+	export const NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S: string;
+	export const NODE_REPL_TRUSTED_CODE_PATHS: string;
 	export const NPM_CLI_JS: string;
 	export const npm_command: string;
 	export const npm_config_cache: string;
@@ -228,8 +231,10 @@ declare module '$env/dynamic/private' {
 	export const env: {
 		ALLUSERSPROFILE: string;
 		APPDATA: string;
+		BROWSER_USE_AVAILABLE_BACKENDS: string;
 		CHROME_CRASHPAD_PIPE_NAME: string;
 		CODEX_INTERNAL_ORIGINATOR_OVERRIDE: string;
+		CODEX_PERMISSION_PROFILE: string;
 		CODEX_SANDBOX_NETWORK_DISABLED: string;
 		CODEX_THREAD_ID: string;
 		COLOR: string;
@@ -240,14 +245,13 @@ declare module '$env/dynamic/private' {
 		DEBUG: string;
 		DriverData: string;
 		EDITOR: string;
-		EFC_10612_1262719628: string;
-		EFC_10612_1592913036: string;
-		EFC_10612_2283032206: string;
-		EFC_10612_2397410445: string;
-		EFC_10612_2775293581: string;
-		EFC_10612_2946480783: string;
-		EFC_10612_3789132940: string;
-		EFC_10612_4126798990: string;
+		EFC_10264_1262719628: string;
+		EFC_10264_1592913036: string;
+		EFC_10264_2283032206: string;
+		EFC_10264_2775293581: string;
+		EFC_10264_2946480783: string;
+		EFC_10264_3789132940: string;
+		EFC_10264_4126798990: string;
 		ELECTRON_RUN_AS_NODE: string;
 		FPS_BROWSER_APP_PROFILE_STRING: string;
 		FPS_BROWSER_USER_PROFILE_STRING: string;
@@ -264,6 +268,8 @@ declare module '$env/dynamic/private' {
 		LOGONSERVER: string;
 		NODE: string;
 		NODE_EXE: string;
+		NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S: string;
+		NODE_REPL_TRUSTED_CODE_PATHS: string;
 		NPM_CLI_JS: string;
 		npm_command: string;
 		npm_config_cache: string;

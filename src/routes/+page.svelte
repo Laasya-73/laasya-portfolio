@@ -3,13 +3,15 @@
   import { profile, toolCards } from '$lib/data/site';
 
   const opensInNewTab = (href: string) => href.startsWith('http') || href.endsWith('.pdf');
+  const featuredStoryUrl =
+    'https://www.iit.edu/student-experience/student-and-alumni-stories/building-practical-skills';
 
   const typewriterLines = [
-    'I build machine learning systems',
-    'Developing practical AI tools',
-    'Working with large language models',
-    'Exploring forecasting systems'
-  ];
+  'Building practical AI systems',
+  'Engineering GenAI applications',
+  'Designing machine learning solutions',
+  'Turning data into intelligent decisions'
+];
 
   let typedLine = '';
   let activeLineIndex = 0;
@@ -65,29 +67,24 @@
 </svelte:head>
 
 <section id="about" class="content-section intro-block">
-  <p class="eyebrow eyebrow-full eyebrow-single-line">APPLIED AI | MACHINE LEARNING | COMPUTATIONAL MATHEMATICS | ILLINOIS TECH CHICAGO</p>
+  <p class="eyebrow eyebrow-full eyebrow-single-line">MACHINE LEARNING • AI SYSTEMS • COMPUTATIONAL MATHEMATICS • ILLINOIS TECH</p>
   <h1>Hi, I'm Laasya Priya.</h1>
   <p class="typewriter-line" aria-live="polite">
     <span>{typedLine}</span><span class="typewriter-caret" aria-hidden="true"></span>
   </p>
 
   <p>
-    I am a graduate student at <a href={profile.schoolUrl} target="_blank" rel="noreferrer">Illinois Institute of Technology</a> working across machine learning
-    engineering, applied research, forecasting systems, and practical AI deployment. My work spans
-    large language models, explainable forecasting, evaluation frameworks, and tools designed to
-    make advanced systems more interpretable and dependable.
-  </p>
+    I recently graduated with a Master's in Data Science from the <a href={profile.schoolUrl} target="_blank" rel="noreferrer">Illinois Institute of Technology.</a> 
+    I build machine learning and generative AI applications that combine research, software engineering, and data-driven decision making.  </p>
 
   <p>
-    I am especially interested in the space where technical depth meets real-world usefulness. That
-    means building systems that not only perform well, but also communicate clearly, behave robustly,
-    and support better decisions for the people using them.
+    My interests span AI systems, forecasting, evaluation frameworks, and intelligent software designed to solve real-world problems with reliability and clarity.
   </p>
 
   <p class="status-row">
     <span class="status-dot" aria-hidden="true"></span>
     <span class="status-copy">
-      Currently seeking full-time roles in AI Engineering or Machine Learning and open to research
+      Seeking full-time roles in AI Engineering or Machine Learning and open to research
       collaborations.
     </span>
   </p>
@@ -133,6 +130,25 @@
         {/if}
       </article>
     {/each}
+  </div>
+
+  <hr class="featured-divider" />
+
+  <div class="featured-block">
+    <p class="eyebrow eyebrow-full featured-eyebrow">Featured</p>
+    <article class="tool-card featured-story-card">
+      <h3>Building Practical Skills</h3>
+      <p class="featured-subtitle">Featured in Illinois Tech Student & Alumni Stories</p>
+      <p>
+      This feature highlights my journey through graduate school, research, teaching, and industry, and how those experiences shaped my approach to building practical AI systems.      
+      </p>
+      <div class="featured-chip-row">
+        <span class="featured-chip">University Spotlight</span>
+      </div>
+      <p class="featured-story-link">
+        <a href={featuredStoryUrl} target="_blank" rel="noreferrer">READ THE FEATURE ↗</a>
+      </p>
+    </article>
   </div>
 </section>
 

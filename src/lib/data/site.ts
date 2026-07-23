@@ -113,10 +113,10 @@ export const toolCards: ToolItem[] = [
     subtitle: '',
     description:
       'Interactive geospatial platform exploring the environmental and community impact of large-scale AI infrastructure and data center development across Illinois.',
-    status: 'ONGOING RESEARCH',
+    status: 'COMPLETED RESEARCH',
     statusNote: 'SoReMo Research Fellowship',
     tags: ['AI Infrastructure', 'Geospatial Analysis', 'Infrastructure Mapping'],
-    ctaLabel: 'Explore Platform',
+    ctaLabel: 'View Platform',
     href: 'https://people-v-ai.vercel.app/'
   }
 ];

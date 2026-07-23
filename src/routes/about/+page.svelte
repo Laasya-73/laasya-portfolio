@@ -38,45 +38,45 @@
 
 <section id="about-overview" class="content-section about-section">
   <h1>Laasya Priya Vemuri</h1>
-  <p class="about-subtitle">Master's Student in Computer Science & Mathematics - Illinois Institute of Technology</p>
+  <p class="about-subtitle">Machine Learning • Generative AI • Applied Research</p>
 
   <p>
-    I am a graduate student at the
-    <a href="https://www.iit.edu/" target="_blank" rel="noreferrer">Illinois Institute of Technology</a>,
-    studying Computer Science and Mathematics with a focus on applied artificial intelligence and
-    machine learning systems. My interests lie in building practical AI tools that connect strong
-    technical foundations with real-world applications.
+    I recently graduated with a Master's in Data Science from the
+    <a href="https://www.iit.edu/" target="_blank" rel="noreferrer">Illinois Institute of Technology.</a> My work combines machine learning, generative AI, forecasting, and software engineering to build systems that solve practical problems. 
+    I enjoy taking ideas from research and turning them into applications that people can understand, trust, and use. Building a strong model is only one part of the process. I care just as much about designing systems that are reliable, interpretable, maintainable, and capable of supporting real decisions.
   </p>
 
   <p>
-    Much of my work centers around large language models, forecasting systems, and AI evaluation
-    frameworks. I enjoy exploring how machine learning systems behave in real environments and
-    designing tools that improve their reliability, interpretability, and practical usefulness.
+    Over the past few years, I've worked across industry, academic research, teaching, and open source. I've built internal AI applications, contributed to research software, developed machine learning systems, and worked on projects spanning large language models, forecasting, geospatial analytics, AI evaluation, and computational mathematics. 
+    Those experiences have shaped how I approach engineering, from writing maintainable software and validating model behavior to communicating technical ideas clearly.
   </p>
 
   <p>
-    Alongside development work, I have been involved in teaching, research collaborations, and
-    open-source contributions, experiences that have helped shape how I approach technical
-    problems. I am particularly interested in projects where AI systems must balance performance,
-    transparency, and meaningful impact.
+    I'm drawn to work at the intersection of machine learning, software engineering, and real-world impact. I enjoy building intelligent applications, designing evaluation frameworks, and creating tools that transform complex data into meaningful insights. 
+    My goal is to develop AI systems that are technically sound, practical, transparent, and valuable to the people who use them.
   </p>
 
   <p>
-    Outside of research and engineering work, I enjoy experimenting with new ideas, building small
-    systems that test concepts quickly, and learning from interdisciplinary perspectives across data
-    science, systems design, and applied mathematics.
+    Outside of work, I enjoy contributing to open-source projects, experimenting with new ideas, and collaborating across research and engineering. 
+    I'm always looking for opportunities to build technology that solves meaningful problems while continuing to grow as an engineer.
+  </p>
+
+  <p>
+    <em>I believe the best AI systems are not the ones that make the boldest predictions, but the ones people can understand, trust, and confidently use.</em>
   </p>
 </section>
 
 <section id="research-interests" class="content-section about-section">
   <p class="eyebrow eyebrow-full">Research Interests</p>
   <div class="about-chip-row">
-    <span class="about-chip">Applied AI</span>
     <span class="about-chip">Machine Learning</span>
-    <span class="about-chip">Large Language Models</span>
-    <span class="about-chip">Forecasting Systems</span>
+    <span class="about-chip">Generative AI</span>
+    <span class="about-chip">AI Systems</span>
     <span class="about-chip">AI Evaluation</span>
-    <span class="about-chip">Data Science</span>
+    <span class="about-chip">Forecasting Systems</span>
+    <span class="about-chip">Open Source</span>
+
+
   </div>
 </section>
 
