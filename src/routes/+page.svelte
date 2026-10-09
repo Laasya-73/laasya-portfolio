@@ -1,17 +1,18 @@
 ﻿<script lang="ts">
+  import ContactInvitation from '$lib/components/ContactInvitation.svelte';
   import { onDestroy, onMount } from 'svelte';
-  import { profile, toolCards } from '$lib/data/site';
+  import { profile, toolCards, qmcpyArticleUrl, soremoArticleUrl } from '$lib/data/site';
 
   const opensInNewTab = (href: string) => href.startsWith('http') || href.endsWith('.pdf');
   const featuredStoryUrl =
     'https://www.iit.edu/student-experience/student-and-alumni-stories/building-practical-skills';
 
   const typewriterLines = [
-  'Building practical AI systems',
-  'Engineering GenAI applications',
-  'Designing machine learning solutions',
-  'Turning data into intelligent decisions'
-];
+    'Building Intelligent Applications',
+    'Engineering AI & ML Solutions',
+    'Developing Native iOS Experiences',
+    'Creating Reliable Software Systems'
+  ];
 
   let typedLine = '';
   let activeLineIndex = 0;
@@ -62,32 +63,64 @@
   <title>{profile.name}</title>
   <meta
     name="description"
-    content="Portfolio of Laasya Priya Vemuri: applied AI systems, research, and teaching."
+    content="Portfolio of Laasya Priya Vemuri: AI, native iOS development, scientific computing, research, and teaching."
   />
 </svelte:head>
 
 <section id="about" class="content-section intro-block">
-  <p class="eyebrow eyebrow-full eyebrow-single-line">MACHINE LEARNING • AI SYSTEMS • COMPUTATIONAL MATHEMATICS • ILLINOIS TECH</p>
+  <p class="eyebrow eyebrow-full eyebrow-single-line">AI & MACHINE LEARNING • NATIVE iOS DEVELOPMENT • RESEARCH</p>
   <h1>Hi, I'm Laasya Priya.</h1>
   <p class="typewriter-line" aria-live="polite">
     <span>{typedLine}</span><span class="typewriter-caret" aria-hidden="true"></span>
   </p>
 
   <p>
-    I recently graduated with a Master's in Data Science from the <a href={profile.schoolUrl} target="_blank" rel="noreferrer">Illinois Institute of Technology.</a> 
-    I build machine learning and generative AI applications that combine research, software engineering, and data-driven decision making.  </p>
-
+    I hold a Master's in Computer Science & Mathematics from
+    <a href={profile.schoolUrl} target="_blank" rel="noreferrer">Illinois Institute of Technology</a>,
+    with experience in AI, machine learning, and native iOS development.
+  </p>
   <p>
-    My interests span AI systems, forecasting, evaluation frameworks, and intelligent software designed to solve real-world problems with reliability and clarity.
+    I build intelligent applications and well-structured mobile experiences, with attention to
+    reliability, performance, and usability. I also contribute to open-source research software
+    and scientific computing.
   </p>
 
   <p class="status-row">
     <span class="status-dot" aria-hidden="true"></span>
     <span class="status-copy">
-      Seeking full-time roles in AI Engineering or Machine Learning and open to research
-      collaborations.
+      Open to full-time AI/ML Engineering and iOS Development opportunities, and research collaborations.
     </span>
   </p>
+</section>
+
+<section id="engineering" class="content-section">
+  <p class="eyebrow eyebrow-full">Engineering Capabilities</p>
+  <div class="capability-grid">
+    <article class="tool-card">
+      <h3>AI & Machine Learning Engineering</h3>
+      <p>
+        I develop machine learning and LLM-powered applications, connecting data processing
+        and integration with model evaluation and clear, usable outputs.
+      </p>
+      <div class="about-chip-row">
+        <span class="about-chip">Machine Learning & Generative AI</span>
+        <span class="about-chip">Data & Integration</span>
+        <span class="about-chip">Evaluation & Reliability</span>
+      </div>
+    </article>
+    <article class="tool-card">
+      <h3>Native iOS Engineering</h3>
+      <p>
+        I develop native applications with Swift, SwiftUI, and UIKit, organizing navigation,
+        asynchronous work, and persistent data through maintainable application architecture.
+      </p>
+      <div class="about-chip-row">
+        <span class="about-chip">SwiftUI & UIKit</span>
+        <span class="about-chip">Architecture & State Management</span>
+        <span class="about-chip">Networking & Persistence</span>
+      </div>
+    </article>
+  </div>
 </section>
 
 <section id="tools" class="content-section">
@@ -109,13 +142,16 @@
           </div>
         {/if}
 
-        {#if tool.href && tool.ctaLabel}
-          <p class="tool-cta-row">
+        <div class="tool-cta-row research-actions">
+          {#if tool.href && tool.ctaLabel}
             <a href={tool.href} target={opensInNewTab(tool.href) ? '_blank' : undefined} rel="noreferrer">
               {tool.ctaLabel} ↗
             </a>
-          </p>
-        {/if}
+          {/if}
+          {#each tool.links ?? [] as link}
+            <a href={link.href} target="_blank" rel="noreferrer">{link.label} ↗</a>
+          {/each}
+        </div>
 
         <div class="tool-status-row">
           <span class="status-pill">{tool.status}</span>
@@ -157,6 +193,15 @@
 
   <ul class="timeline">
     <li class="timeline-group">
+      <p class="timeline-period">August 2026 - Present</p>
+      <ul class="timeline-points">
+        <li>
+          Research Assistant at Illinois Institute of Technology, contributing to QMCPy through
+          open-source research in probability modeling, numerical integration, and scientific computing.
+        </li>
+      </ul>
+    </li>
+    <li class="timeline-group">
       <p class="timeline-period">January 2026</p>
       <ul class="timeline-points">
         <li>
@@ -169,6 +214,8 @@
           <a href="https://www.soremo.org/" target="_blank" rel="noreferrer">SoReMo Research Fellowship</a>
           at Illinois Institute of Technology to conduct research on the environmental, economic, and
           community-level implications of large-scale AI infrastructure and data center development.
+          The research is complete, with findings published in the SoReMo journal in June 2026.
+          <a href={soremoArticleUrl} target="_blank" rel="noreferrer">Read Published Research ↗</a>
         </li>
       </ul>
     </li>
@@ -176,10 +223,10 @@
       <p class="timeline-period">Fall 2025</p>
       <ul class="timeline-points">
         <li>
-          Contributed to the
-          <a href="https://qmcpy.org/2026/04/18/extending-scipywrapper-of-qmcpy-to-support-dependent-and-custom-distributions/" target="_blank" rel="noreferrer">QMCPy</a>
-          open-source library, extending the True Measure class to support dependent distributions
-          through improvements to the SciPy wrapper integration.
+          Began contributing to the
+          <a href={qmcpyArticleUrl} target="_blank" rel="noreferrer">QMCPy</a>
+          open-source library through work on dependent and custom distributions in SciPyWrapper,
+          later merged in January 2026.
         </li>
         <li>
           Served as a Teaching Assistant for CSP 571: Data Preparation & Analysis at Illinois
@@ -201,9 +248,4 @@
   </ul>
 </section>
 
-<section id="contact-home" class="content-section home-contact">
-  <p class="talk-inline">
-    Let's
-    <a href={profile.linkedin} target="_blank" rel="noreferrer">Talk AI</a>
-  </p>
-</section>
+<ContactInvitation />

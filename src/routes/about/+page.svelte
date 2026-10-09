@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { profile } from '$lib/data/site';
+  import ContactInvitation from '$lib/components/ContactInvitation.svelte';
+  import { profile, skillGroups, soremoArticleUrl } from '$lib/data/site';
 
   let copied = false;
   let copiedTimer: ReturnType<typeof setTimeout> | undefined;
@@ -32,51 +33,74 @@
   <title>About | Laasya Priya Vemuri</title>
   <meta
     name="description"
-    content="About Laasya Priya Vemuri - graduate student in Computer Science and Mathematics at Illinois Institute of Technology."
+    content="About Laasya Priya Vemuri, an Illinois Tech Computer Science & Mathematics graduate working in AI/ML engineering, native iOS development, and research."
   />
 </svelte:head>
 
 <section id="about-overview" class="content-section about-section">
   <h1>Laasya Priya Vemuri</h1>
-  <p class="about-subtitle">Machine Learning • Generative AI • Applied Research</p>
+  <p class="about-subtitle">AI/ML Engineering • Native iOS Development • Research</p>
 
   <p>
-    I recently graduated with a Master's in Data Science from the
-    <a href="https://www.iit.edu/" target="_blank" rel="noreferrer">Illinois Institute of Technology.</a> My work combines machine learning, generative AI, forecasting, and software engineering to build systems that solve practical problems. 
-    I enjoy taking ideas from research and turning them into applications that people can understand, trust, and use. Building a strong model is only one part of the process. I care just as much about designing systems that are reliable, interpretable, maintainable, and capable of supporting real decisions.
+    I hold a Master's in Computer Science & Mathematics from
+    <a href={profile.schoolUrl} target="_blank" rel="noreferrer">Illinois Institute of Technology</a>
+    and a B.Tech in Computer Science. I enjoy the engineering work behind useful applications:
+    choosing an approach, working through its constraints, and making the result dependable
+    for the person using it.
   </p>
-
   <p>
-    Over the past few years, I've worked across industry, academic research, teaching, and open source. I've built internal AI applications, contributed to research software, developed machine learning systems, and worked on projects spanning large language models, forecasting, geospatial analytics, AI evaluation, and computational mathematics. 
-    Those experiences have shaped how I approach engineering, from writing maintainable software and validating model behavior to communicating technical ideas clearly.
+    My AI/ML experience includes machine learning, generative AI applications, and LLM evaluation.
+    At Springer Capital, I worked as an LLM Analyst Intern on evaluation pipelines and
+    experimentation frameworks. I care about how data is prepared and integrated, how model
+    behavior is assessed, and how results are presented.
   </p>
-
   <p>
-    I'm drawn to work at the intersection of machine learning, software engineering, and real-world impact. I enjoy building intelligent applications, designing evaluation frameworks, and creating tools that transform complex data into meaningful insights. 
-    My goal is to develop AI systems that are technically sound, practical, transparent, and valuable to the people who use them.
+    In native iOS development, I build interfaces with SwiftUI and UIKit and structure
+    applications around clear responsibilities. My development practices cover navigation
+    and state management, API networking, concurrency, persistence, and testing. I use Swift
+    and Combine to manage data flow while keeping application code understandable and maintainable.
   </p>
-
   <p>
-    Outside of work, I enjoy contributing to open-source projects, experimenting with new ideas, and collaborating across research and engineering. 
-    I'm always looking for opportunities to build technology that solves meaningful problems while continuing to grow as an engineer.
+    As a Research Assistant at Illinois Tech, I contribute to QMCPy, with seven merged
+    open-source contributions covering probability modeling and numerical integration.
+    My completed SoReMo fellowship examined environmental and community impacts of AI
+    infrastructure, with findings published in the SoReMo journal. Teaching data science
+    and algorithms has also strengthened how I communicate technical ideas.
   </p>
-
   <p>
-    <em>I believe the best AI systems are not the ones that make the boldest predictions, but the ones people can understand, trust, and confidently use.</em>
+    <em>I believe the best technology is technology people can understand, trust, and confidently use.</em>
   </p>
 </section>
 
 <section id="research-interests" class="content-section about-section">
-  <p class="eyebrow eyebrow-full">Research Interests</p>
+  <p class="eyebrow eyebrow-full">Technical Interests</p>
   <div class="about-chip-row">
-    <span class="about-chip">Machine Learning</span>
+    <span class="about-chip">AI/ML Engineering</span>
+    <span class="about-chip">Native iOS Development</span>
     <span class="about-chip">Generative AI</span>
     <span class="about-chip">AI Systems</span>
     <span class="about-chip">AI Evaluation</span>
     <span class="about-chip">Forecasting Systems</span>
     <span class="about-chip">Open Source</span>
+    <span class="about-chip">Scientific Computing</span>
 
 
+  </div>
+</section>
+
+<section id="technical-skills" class="content-section about-section">
+  <p class="eyebrow eyebrow-full">Technical Skills</p>
+  <div class="skills-grid">
+    {#each skillGroups as group}
+      <article class="tool-card">
+        <h3>{group.title}</h3>
+        <div class="about-chip-row">
+          {#each group.skills as skill}
+            <span class="about-chip">{skill}</span>
+          {/each}
+        </div>
+      </article>
+    {/each}
   </div>
 </section>
 
@@ -110,13 +134,21 @@
 </section>
 
 <section id="experience" class="content-section about-section">
-  <p class="eyebrow eyebrow-full">Work Experience</p>
+  <p class="eyebrow eyebrow-full">Research & Work Experience</p>
   <div class="about-list">
+    <article class="about-item about-work-item">
+      <p class="about-work-line">
+        <strong>Research Assistant</strong>
+        <a href={profile.schoolUrl} target="_blank" rel="noreferrer">Illinois Institute of Technology</a>
+        <span class="about-year">August 2026 - Present</span>
+      </p>
+    </article>
+
     <article class="about-item about-work-item">
       <p class="about-work-line">
         <strong>Graduate Teaching Assistant</strong>
         <a href="https://www.iit.edu/" target="_blank" rel="noreferrer">Illinois Institute of Technology</a>
-        <span class="about-year">2025-2026</span>
+        <span class="about-year">May 2025 - May 2026</span>
       </p>
     </article>
 
@@ -132,24 +164,37 @@
 
 <section id="awards" class="content-section about-section">
   <p class="eyebrow eyebrow-full">Fellowships & Awards</p>
-  <article class="about-item about-award">
-    <div class="about-item-head">
-      <h3>SoReMo Research Fellowship</h3>
-      <span class="about-year">2026</span>
-    </div>
-    <p class="about-award-org">
-      <a href="https://www.soremo.org/" class="about-highlight-link" target="_blank" rel="noreferrer">
-        Society for Research on Mathematics Optimization (SoReMo)
-      </a>
-    </p>
-    <p class="about-award-text">
-      Awarded to support research on the societal and environmental implications of large-scale AI
-      infrastructure. My project,
-      <span class="about-project-title">"The People v. Hasty AI Development,"</span>
-      examines the environmental justice dimensions of data center expansion, including energy
-      demand, land use, and regional community impacts.
-    </p>
-  </article>
+  <div class="about-list">
+    <article class="about-item about-award">
+      <div class="about-item-head">
+        <h3>Upsilon Pi Epsilon (UPE)</h3>
+        <span class="about-year">2026</span>
+      </div>
+      <p class="about-award-org">Illinois Institute of Technology Chapter</p>
+      <p class="about-award-text">
+        Inducted into the international honor society for Computing and Information Disciplines.
+      </p>
+    </article>
+    <article class="about-item about-award">
+      <div class="about-item-head">
+        <h3>SoReMo Research Fellowship</h3>
+        <span class="about-year">2026</span>
+      </div>
+      <p class="about-award-org">
+        <a href="https://www.soremo.org/" class="about-highlight-link" target="_blank" rel="noreferrer">
+          Society for Research on Mathematics Optimization (SoReMo)
+        </a>
+      </p>
+      <p class="about-award-text">
+        Completed research on the societal and environmental implications of AI infrastructure.
+        The published article, <span class="about-project-title">"The People v. Hasty AI,"</span>
+        examines data center expansion, resource demand, and community impacts.
+      </p>
+      <p class="tool-cta-row">
+        <a href={soremoArticleUrl} target="_blank" rel="noreferrer">Read Published Research ↗</a>
+      </p>
+    </article>
+  </div>
 </section>
 
 <section id="contact" class="content-section about-section">
@@ -174,9 +219,4 @@
   </div>
 </section>
 
-<section class="content-section home-contact">
-  <p class="talk-inline">
-    Let's
-    <a href={profile.linkedin} target="_blank" rel="noreferrer">Talk AI</a>
-  </p>
-</section>
+<ContactInvitation />

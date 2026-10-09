@@ -23,6 +23,7 @@ export type ToolItem = {
   tags?: string[];
   ctaLabel?: string;
   href?: string;
+  links?: LinkItem[];
 };
 
 export type NewsItem = {
@@ -91,18 +92,21 @@ export const navItems: NavItem[] = [
   { label: 'Teaching', href: '/teaching' }
 ];
 
+export const qmcpyArticleUrl = 'https://qmcsoftware.org/blogs/scipywrapper/';
+export const soremoArticleUrl = 'https://journals.library.iit.edu/index.php/Soremo/article/view/314';
+
 export const profile = {
   name: 'Laasya Priya Vemuri',
   location: 'Chicago, IL',
   school: 'Illinois Institute of Technology',
   schoolUrl: 'https://www.iit.edu/',
-  universityEmail: 'lvemuri1@hawk.illinoistech.edu',
+  universityEmail: 'lvemuri1@illinoistech.edu',
   email: 'vlaasyapriya77@gmail.com',
   github: 'https://github.com/Laasya-73',
   linkedin: 'https://www.linkedin.com/in/laasya-priya-vemuri',
   photo: '/images/laasya-profile.jpg',
   bio: [
-    'I am a graduate student at Illinois Institute of Technology working across machine learning engineering, applied research, forecasting systems, and practical AI deployment. My work spans large language models, explainable forecasting, evaluation frameworks, and tools designed to make advanced systems more interpretable and dependable.',
+    'I hold a Master’s in Computer Science & Mathematics from Illinois Institute of Technology, with experience in AI/ML engineering and native iOS development. I also contribute to open-source research software and scientific computing.',
     'I am especially interested in the space where technical depth meets real-world usefulness. That means building systems that not only perform well, but also communicate clearly, behave robustly, and support better decisions for the people using them.',
   ]
 };
@@ -117,7 +121,8 @@ export const toolCards: ToolItem[] = [
     statusNote: 'SoReMo Research Fellowship',
     tags: ['AI Infrastructure', 'Geospatial Analysis', 'Infrastructure Mapping'],
     ctaLabel: 'View Platform',
-    href: 'https://people-v-ai.vercel.app/'
+    href: 'https://people-v-ai.vercel.app/',
+    links: [{ label: 'Read Published Research', href: soremoArticleUrl }]
   }
 ];
 
@@ -158,6 +163,14 @@ export const projects: ProjectItem[] = [
 
 export const experience: ExperienceItem[] = [
   {
+    organization: 'Illinois Institute of Technology',
+    role: 'Research Assistant',
+    period: 'August 2026 - Present',
+    description:
+      'Research software engineering for QMCPy, building on earlier open-source work. Seven merged contributions in 2026 cover distributions, copulas, independent composition, mixtures, chained transformations, numerical validation, tests, and documentation.',
+    link: '/research#qmcpy'
+  },
+  {
     organization: 'Springer Capital',
     role: 'LLM Analyst Intern',
     period: '2025',
@@ -167,9 +180,9 @@ export const experience: ExperienceItem[] = [
   {
     organization: 'QMCPy',
     role: 'Open-Source Contributor',
-    period: '2025',
+    period: '2025 - 2026',
     description:
-      'Extended true-measure support by improving SciPy wrapper pathways for dependent distributions.',
+      'Developed dependent and custom distribution support for SciPyWrapper, merged in January 2026 with validation, tests, and demonstration notebooks.',
     link: 'https://github.com/QMCSoftware/QMCSoftware'
   }
 ];
@@ -180,7 +193,7 @@ export const fellowships: FellowshipItem[] = [
     year: '2026',
     organization: 'Society for Research on Mathematics Optimization (SoReMo)',
     description:
-      'Researching environmental, economic, and social consequences of AI infrastructure expansion with focus on responsible modeling and community impact.'
+      'Completed research on environmental and community impacts of AI infrastructure, with a published SoReMo article.'
   },
   {
     title: 'Build Fellowship',
@@ -200,15 +213,19 @@ export const teaching: TeachingItem[] = [
       'Supported students through grading, office hours, and technical explanations for asynchronous learners.'
   },
   {
-    course: 'Computer Science Course Support at Illinois Tech',
+    course: 'CSP 571 - Data Preparation and Analysis',
     role: 'Teaching Assistant',
-    period: 'Previous Role',
+    period: 'May 2025 - December 2025',
     description:
       'Helped students strengthen conceptual understanding, problem solving, and implementation skills through course support.'
   }
 ];
 
 export const timeline: TimelineItem[] = [
+  {
+    period: 'August 2026 - Present',
+    text: 'Research Assistant at Illinois Institute of Technology, contributing to QMCPy through open-source research in probability modeling, numerical integration, and scientific computing.'
+  },
   {
     period: 'March 2026',
     text: 'Expanded ForecastLens AI with explainability-oriented model comparison and interactive decision-support outputs.',
@@ -221,9 +238,9 @@ export const timeline: TimelineItem[] = [
   },
   {
     period: '2025',
-    text: 'Contributed to QMCPy by extending true-measure functionality to support dependent distributions.',
-    link: 'https://github.com/QMCSoftware/QMCSoftware',
-    linkLabel: 'QMCPy Repository'
+    text: 'Began QMCPy open-source work on dependent and custom distributions, leading to a SciPyWrapper contribution merged in January 2026.',
+    link: qmcpyArticleUrl,
+    linkLabel: 'Read the Research Article'
   }
 ];
 
@@ -251,4 +268,11 @@ export const contactLinks: ContactLink[] = [
     href: 'https://github.com/Laasya-73',
     display: 'github.com/Laasya-73'
   }
+];
+
+export const skillGroups = [
+  { title: 'AI & Machine Learning', skills: ['Python', 'Machine Learning', 'LLMs', 'Generative AI', 'Model Evaluation', 'Data Processing', 'Data Analysis', 'Explainable Forecasting', 'Geospatial Analytics'] },
+  { title: 'iOS Development', skills: ['Swift', 'SwiftUI', 'UIKit', 'Combine', 'Core Data', 'URLSession', 'XCTest'] },
+  { title: 'Software Engineering', skills: ['MVVM / MVVM-C', 'Coordinator Pattern', 'REST APIs', 'Dependency Injection', 'Protocol-Oriented Programming', 'Swift Concurrency (async/await)', 'Testing', 'Git'] },
+  { title: 'Research & Scientific Computing', skills: ['SciPy', 'Numerical Methods', 'Probability Distributions', 'Copulas', 'Quasi-Monte Carlo', 'Computational Experiments'] }
 ];

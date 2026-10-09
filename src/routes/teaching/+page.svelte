@@ -1,4 +1,5 @@
 <script lang="ts">
+  import ContactInvitation from '$lib/components/ContactInvitation.svelte';
   import { profile } from '$lib/data/site';
 </script>
 
@@ -16,7 +17,7 @@
     <h1>Teaching & Mentoring</h1>
     <p>
       I have worked as a Teaching Assistant at the Illinois Institute of Technology, supporting
-      courses in data science and computer science. In these roles, I assist students in
+      courses in data science and computer science. In these roles, I assisted students in
       understanding concepts related to data preparation, analysis, and algorithmic thinking while
       guiding them through practical programming and problem-solving tasks.
     </p>
@@ -62,9 +63,4 @@
   </ul>
 </section>
 
-<section class="content-section home-contact">
-  <p class="talk-inline">
-    Let's
-    <a href={profile.linkedin} target="_blank" rel="noreferrer">Talk AI</a>
-  </p>
-</section>
+<ContactInvitation />

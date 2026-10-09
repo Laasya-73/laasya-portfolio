@@ -1,25 +1,25 @@
 <script lang="ts">
-  import { profile } from '$lib/data/site';
+  import ContactInvitation from '$lib/components/ContactInvitation.svelte';
+  import { qmcpyArticleUrl } from '$lib/data/site';
 </script>
 
 <svelte:head>
   <title>Research | Laasya Priya Vemuri</title>
   <meta
     name="description"
-    content="Work and projects by Laasya Priya Vemuri, focused on applied AI systems and machine learning."
+    content="Work and projects by Laasya Priya Vemuri, covering applied AI, scientific computing, and native iOS applications."
   />
 </svelte:head>
 
 <section id="research" class="content-section research-hero">
   <div>
-    <p class="eyebrow eyebrow-full">Research</p>
+    <p class="eyebrow eyebrow-full">Engineering & Research</p>
     <h1>Work & Projects</h1>
     <p>
-      My work focuses on building practical AI systems that translate machine learning models into
-      usable tools. I am particularly interested in explainable forecasting, AI-driven analytics,
-      and systems that help users better understand model predictions.
+      My work brings together AI, machine learning, and native iOS development. I build
+      intelligent systems, data-driven tools, and mobile experiences with attention to
+      reliable behavior, thoughtful design, and practical use.
     </p>
-    <p>Below are selected projects that reflect this work.</p>
   </div>
   <div class="research-visual-card" aria-hidden="true">
     <svg class="research-visual-svg" viewBox="0 0 320 220" role="img" aria-label="Forecasting visual">
@@ -45,6 +45,30 @@
       <line x1="42" y1="98" x2="272" y2="98" stroke="#d3dbf0" stroke-dasharray="4 5" />
     </svg>
   </div>
+</section>
+
+<section id="qmcpy" class="content-section">
+  <p class="eyebrow eyebrow-full">Research Software Engineering</p>
+  <article class="tool-card">
+    <h3>QMCPy Research Software Engineering</h3>
+    <p class="item-meta">Research Assistant | Illinois Institute of Technology | August 2026 - Present</p>
+    <p>
+      I contribute to QMCPy, an open-source Python library for quasi-Monte Carlo methods and
+      numerical integration. Seven merged contributions cover dependent and custom probability
+      distributions, copula-based dependence modeling, independent ProductMeasure composition
+      and statistical summaries, and mixed distributions with mixture sampling.
+    </p>
+    <p>
+      I also added domain inclusion support for chained TrueMeasure transformations, allowing
+      compatible transformations to compose more flexibly. The work combines mathematical and
+      numerical validation with unit tests, documentation, and research notebooks, making these
+      methods easier to inspect and use. All seven contributions were merged; the TrueMeasure
+      demonstration notebooks were merged into a feature branch.
+    </p>
+    <p class="tool-cta-row">
+      <a href={qmcpyArticleUrl} target="_blank" rel="noreferrer">Read the Research Article ↗</a>
+    </p>
+  </article>
 </section>
 
 <section id="papers" class="content-section">
@@ -158,9 +182,4 @@
   </ol>
 </section>
 
-<section class="content-section home-contact">
-  <p class="talk-inline">
-    Let's
-    <a href={profile.linkedin} target="_blank" rel="noreferrer">Talk AI</a>
-  </p>
-</section>
+<ContactInvitation />

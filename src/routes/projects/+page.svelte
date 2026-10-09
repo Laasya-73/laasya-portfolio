@@ -1,4 +1,5 @@
 <script lang="ts">
+  import ContactInvitation from '$lib/components/ContactInvitation.svelte';
   import ProjectCard from '$lib/components/ProjectCard.svelte';
   import { projects, timeline } from '$lib/data/site';
 
@@ -24,8 +25,8 @@
   <p class="eyebrow">Projects</p>
   <h1>Work & Interactive Tools</h1>
   <p>
-    These are selected projects focused on explainability, reliable model behavior, and clear
-    decision support for real users.
+    My engineering work includes AI/ML systems and native iOS development. These selected
+    AI and research projects demonstrate explainability, evaluation, and practical decision support.
   </p>
 
   <div class="project-list">
@@ -60,3 +61,5 @@
     {/if}
   </ul>
 </section>
+
+<ContactInvitation />

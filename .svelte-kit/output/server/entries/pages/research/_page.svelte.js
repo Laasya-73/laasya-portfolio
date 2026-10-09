@@ -1,28 +1,44 @@
-import { ad as head, a as attr } from "../../../chunks/index2.js";
-import { p as profile } from "../../../chunks/site.js";
-function _page($$renderer, $$props) {
-  $$renderer.component(($$renderer2) => {
-    head("1seozpa", $$renderer2, ($$renderer3) => {
-      $$renderer3.title(($$renderer4) => {
-        $$renderer4.push(`<title>Research | Laasya Priya Vemuri</title>`);
-      });
-      $$renderer3.push(`<meta name="description" content="Work and projects by Laasya Priya Vemuri, focused on applied AI systems and machine learning."/>`);
+import { h as head, a as attr } from "../../../chunks/index2.js";
+import { C as ContactInvitation } from "../../../chunks/ContactInvitation.js";
+import { q as qmcpyArticleUrl } from "../../../chunks/site.js";
+function _page($$renderer) {
+  head("1seozpa", $$renderer, ($$renderer2) => {
+    $$renderer2.title(($$renderer3) => {
+      $$renderer3.push(`<title>Research | Laasya Priya Vemuri</title>`);
     });
-    $$renderer2.push(`<section id="research" class="content-section research-hero"><div><p class="eyebrow eyebrow-full">Research</p> <h1>Work &amp; Projects</h1> <p>My work focuses on building practical AI systems that translate machine learning models into
-      usable tools. I am particularly interested in explainable forecasting, AI-driven analytics,
-      and systems that help users better understand model predictions.</p> <p>Below are selected projects that reflect this work.</p></div> <div class="research-visual-card" aria-hidden="true"><svg class="research-visual-svg" viewBox="0 0 320 220" role="img" aria-label="Forecasting visual"><defs><linearGradient id="forecastStroke" x1="0" x2="1" y1="0" y2="0"><stop offset="0%" stop-color="#4a4ff3" stop-opacity="0.4"></stop><stop offset="100%" stop-color="#4a4ff3" stop-opacity="0.95"></stop></linearGradient></defs><rect x="16" y="16" width="288" height="188" rx="14" fill="#f7f9ff" stroke="#cfd7eb"></rect><path d="M42 165 L102 126 L150 140 L198 92 L258 70" fill="none" stroke="url(#forecastStroke)" stroke-width="4"></path><circle cx="102" cy="126" r="6.5" fill="#4a4ff3" fill-opacity="0.75"></circle><circle cx="198" cy="92" r="7.5" fill="#4a4ff3" fill-opacity="0.9"></circle><circle cx="258" cy="70" r="8.5" fill="#4a4ff3"></circle><rect x="52" y="92" width="18" height="73" rx="4" fill="#4a4ff3" fill-opacity="0.16"></rect><rect x="78" y="108" width="18" height="57" rx="4" fill="#4a4ff3" fill-opacity="0.24"></rect><rect x="104" y="83" width="18" height="82" rx="4" fill="#4a4ff3" fill-opacity="0.3"></rect><rect x="130" y="116" width="18" height="49" rx="4" fill="#4a4ff3" fill-opacity="0.22"></rect><rect x="156" y="104" width="18" height="61" rx="4" fill="#4a4ff3" fill-opacity="0.35"></rect><rect x="182" y="84" width="18" height="81" rx="4" fill="#4a4ff3" fill-opacity="0.28"></rect><line x1="42" y1="165" x2="272" y2="165" stroke="#b8c4e5" stroke-dasharray="5 4"></line><line x1="42" y1="132" x2="272" y2="132" stroke="#d3dbf0" stroke-dasharray="4 5"></line><line x1="42" y1="98" x2="272" y2="98" stroke="#d3dbf0" stroke-dasharray="4 5"></line></svg></div></section> <section id="papers" class="content-section"><p class="eyebrow eyebrow-full">Projects</p> <ol class="project-stream"><li><article class="project-entry"><div class="project-entry-head"><span class="project-number">1.</span> <span class="project-state">Live</span> <span class="project-kind">Applied AI Platform</span></div> <h3>ForecastLens AI - Explainable Time Series Forecasting Platform</h3> <p>An AI-powered forecasting platform that transforms raw time-series data into
+    $$renderer2.push(`<meta name="description" content="Work and projects by Laasya Priya Vemuri, covering applied AI, scientific computing, and native iOS applications."/>`);
+  });
+  $$renderer.push(`<section id="research" class="content-section research-hero"><div><p class="eyebrow eyebrow-full">Engineering &amp; Research</p> <h1>Work &amp; Projects</h1> <p>My work brings together AI, machine learning, and native iOS development. I build
+      intelligent systems, data-driven tools, and mobile experiences with attention to
+      reliable behavior, thoughtful design, and practical use.</p></div> <div class="research-visual-card" aria-hidden="true"><svg class="research-visual-svg" viewBox="0 0 320 220" role="img" aria-label="Forecasting visual"><defs><linearGradient id="forecastStroke" x1="0" x2="1" y1="0" y2="0"><stop offset="0%" stop-color="#4a4ff3" stop-opacity="0.4"></stop><stop offset="100%" stop-color="#4a4ff3" stop-opacity="0.95"></stop></linearGradient></defs><rect x="16" y="16" width="288" height="188" rx="14" fill="#f7f9ff" stroke="#cfd7eb"></rect><path d="M42 165 L102 126 L150 140 L198 92 L258 70" fill="none" stroke="url(#forecastStroke)" stroke-width="4"></path><circle cx="102" cy="126" r="6.5" fill="#4a4ff3" fill-opacity="0.75"></circle><circle cx="198" cy="92" r="7.5" fill="#4a4ff3" fill-opacity="0.9"></circle><circle cx="258" cy="70" r="8.5" fill="#4a4ff3"></circle><rect x="52" y="92" width="18" height="73" rx="4" fill="#4a4ff3" fill-opacity="0.16"></rect><rect x="78" y="108" width="18" height="57" rx="4" fill="#4a4ff3" fill-opacity="0.24"></rect><rect x="104" y="83" width="18" height="82" rx="4" fill="#4a4ff3" fill-opacity="0.3"></rect><rect x="130" y="116" width="18" height="49" rx="4" fill="#4a4ff3" fill-opacity="0.22"></rect><rect x="156" y="104" width="18" height="61" rx="4" fill="#4a4ff3" fill-opacity="0.35"></rect><rect x="182" y="84" width="18" height="81" rx="4" fill="#4a4ff3" fill-opacity="0.28"></rect><line x1="42" y1="165" x2="272" y2="165" stroke="#b8c4e5" stroke-dasharray="5 4"></line><line x1="42" y1="132" x2="272" y2="132" stroke="#d3dbf0" stroke-dasharray="4 5"></line><line x1="42" y1="98" x2="272" y2="98" stroke="#d3dbf0" stroke-dasharray="4 5"></line></svg></div></section> <section id="qmcpy" class="content-section"><p class="eyebrow eyebrow-full">Research Software Engineering</p> <article class="tool-card"><h3>QMCPy | Research Software Engineering</h3> <p class="item-meta">Research Assistant | Illinois Institute of Technology | August 2026 - Present</p> <p>I contribute to QMCPy, an open-source Python library for quasi-Monte Carlo methods and
+      numerical integration. Seven merged contributions cover dependent and custom probability
+      distributions, copula-based dependence modeling, independent ProductMeasure composition
+      and statistical summaries, and mixed distributions with mixture sampling.</p> <p>I also added domain inclusion support for chained TrueMeasure transformations, allowing
+      compatible transformations to compose more flexibly. The work combines mathematical and
+      numerical validation with unit tests, documentation, and research notebooks, making these
+      methods easier to inspect and use. All seven contributions were merged; the TrueMeasure
+      demonstration notebooks were merged into a feature branch.</p> <p class="tool-cta-row"><a${attr("href", qmcpyArticleUrl)} target="_blank" rel="noreferrer">Read the Research Article ↗</a></p></article></section> <section id="papers" class="content-section"><p class="eyebrow eyebrow-full">Projects</p> <ol class="project-stream"><li><article class="project-entry"><div class="project-entry-head"><span class="project-number">1.</span> <span class="project-state">Live</span> <span class="project-kind">Applied AI Platform</span></div> <h3>ForecastLens AI - Explainable Time Series Forecasting Platform</h3> <p>An AI-powered forecasting platform that transforms raw time-series data into
           interpretable predictions. The system integrates automated pattern detection, anomaly
           identification, and model comparison to generate reliable forecasts and explain trends
           clearly for users.</p> <p>Built with a multi-model evaluation pipeline that compares forecasting approaches using
           metrics such as MAPE and RMSE, ensuring transparent and robust model selection. The
           platform also includes LLM-driven narrative insights that translate statistical outputs
-          into human-readable explanations.</p> <p class="project-link-row"><span>Live Tool:</span> <a href="https://forecaststudio.lovable.app/" target="_blank" rel="noreferrer">ForecastLens AI →</a></p></article></li> <li><article class="project-entry"><div class="project-entry-head"><span class="project-number">2.</span> <span class="project-state">Research</span> <span class="project-kind">Build Fellowship Project</span></div> <h3>Bioinformatics &amp; Machine Learning: Biomarkers of Aging</h3> <p>Developed machine learning workflows as part of the Build Fellowship program, focusing on
+          into human-readable explanations.</p> <p class="project-link-row"><span>Live Tool:</span> <a href="https://forecaststudio.lovable.app/" target="_blank" rel="noreferrer">ForecastLens AI →</a></p></article></li> <li><article class="project-entry"><div class="project-entry-head"><span class="project-number">2.</span> <span class="project-state">Live</span> <span class="project-kind">Productivity AI Application</span></div> <h3>Voice-to-Action Productivity Assistant</h3> <p>This project is an AI-powered web application that converts spoken ideas into structured
+          productivity workflows. Users can record or upload voice notes, and the system
+          automatically transforms the audio into actionable items such as tasks, reminders,
+          calendar events, notes, or ideas.</p> <p>The goal of the application is to bridge the gap between unstructured voice input and
+          structured productivity systems, enabling users to quickly capture thoughts and turn them
+          into organized actions.</p> <p class="project-link-row"><span>Live Tool:</span> <a href="https://voicetoaction.vercel.app/" target="_blank" rel="noreferrer">Voice-to-Action →</a></p></article></li> <li><article class="project-entry"><div class="project-entry-head"><span class="project-number">3.</span> <span class="project-state">Live</span> <span class="project-kind">AI Decision System</span></div> <h3>LaunchVerdict AI - Startup Idea Critic</h3> <p>An AI-powered web app that evaluates startup ideas and converts them into structured
+          venture insights. It scores ideas across problem strength, differentiation, monetization,
+          and execution.</p> <p>The platform highlights risks, suggests focused pivots, and includes a Brutal Honesty
+          Mode for direct, no-sugarcoating feedback.</p> <p>Built to help founders quickly validate and refine ideas before building.</p> <p class="project-link-row"><span>Live Tool:</span> <a href="https://launchverdictai.vercel.app/" target="_blank" rel="noreferrer">LaunchVerdict AI →</a></p></article></li> <li><article class="project-entry"><div class="project-entry-head"><span class="project-number">4.</span> <span class="project-state">Research</span> <span class="project-kind">Build Fellowship Project</span></div> <h3>Bioinformatics &amp; Machine Learning: Biomarkers of Aging</h3> <p>Developed machine learning workflows as part of the Build Fellowship program, focusing on
           practical applications of data-driven modeling and experimentation. The project involved
           designing data analysis pipelines, experimenting with predictive models, and translating
           model outputs into interpretable insights.</p> <p>The work emphasized bridging theoretical machine learning concepts with real-world
           analytical problems while collaborating with mentors and peers in a research-driven
-          environment.</p></article></li></ol></section> <section class="content-section home-contact"><p class="talk-inline">Let's <a${attr("href", profile.linkedin)} target="_blank" rel="noreferrer">Talk AI</a></p></section>`);
-  });
+          environment.</p></article></li></ol></section> `);
+  ContactInvitation($$renderer);
+  $$renderer.push(`<!---->`);
 }
 export {
   _page as default

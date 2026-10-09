@@ -1,5 +1,6 @@
-import { c as escape_html, a as attr, e as ensure_array_like, ae as bind_props, ad as head } from "../../../chunks/index2.js";
-import { a as timeline, b as projects } from "../../../chunks/site.js";
+import { e as escape_html, a as attr, b as ensure_array_like, ae as bind_props, h as head } from "../../../chunks/index2.js";
+import { C as ContactInvitation } from "../../../chunks/ContactInvitation.js";
+import { b as timeline, c as projects } from "../../../chunks/site.js";
 function ProjectCard($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     let project = $$props["project"];
@@ -30,8 +31,8 @@ function _page($$renderer, $$props) {
       });
       $$renderer3.push(`<meta name="description" content="Projects by Laasya Priya Vemuri, including ForecastLens AI and applied machine learning research work."/>`);
     });
-    $$renderer2.push(`<section id="projects" class="content-section"><p class="eyebrow">Projects</p> <h1>Work &amp; Interactive Tools</h1> <p>These are selected projects focused on explainability, reliable model behavior, and clear
-    decision support for real users.</p> <div class="project-list"><!--[-->`);
+    $$renderer2.push(`<section id="projects" class="content-section"><p class="eyebrow">Projects</p> <h1>Work &amp; Interactive Tools</h1> <p>My engineering work includes AI/ML systems and native iOS development. These selected
+    AI and research projects demonstrate explainability, evaluation, and practical decision support.</p> <div class="project-list"><!--[-->`);
     const each_array = ensure_array_like(projects);
     for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
       let project = each_array[$$index];
@@ -58,7 +59,9 @@ function _page($$renderer, $$props) {
       }
       $$renderer2.push(`<!--]-->`);
     }
-    $$renderer2.push(`<!--]--></ul></section>`);
+    $$renderer2.push(`<!--]--></ul></section> `);
+    ContactInvitation($$renderer2);
+    $$renderer2.push(`<!---->`);
   });
 }
 export {

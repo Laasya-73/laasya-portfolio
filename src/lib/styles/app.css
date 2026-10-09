@@ -414,6 +414,7 @@ a {
 }
 
 .content-section {
+  --section-inline-padding: 1.65rem;
   padding: 1.45rem 1.65rem;
   border-bottom: 1px solid var(--line);
   scroll-margin-top: 5.4rem;
@@ -701,8 +702,8 @@ a {
 }
 
 .featured-divider {
-  width: calc(100% + 3.3rem);
-  margin: 2rem -1.65rem 0;
+  width: calc(100% + var(--section-inline-padding) + var(--section-inline-padding));
+  margin: 2rem calc(0px - var(--section-inline-padding)) 0;
   border: 0;
   border-top: 1px solid var(--line);
 }
@@ -801,6 +802,21 @@ a {
   height: 0.42rem;
   border-radius: 999px;
   background: var(--accent);
+}
+
+/* Align homepage milestone dots without changing the inactive connector colors. */
+#updates .timeline {
+  --timeline-spine-offset: 0.95rem;
+}
+
+#updates .timeline > li::before {
+  /* Center the dot on the 1.5px spine rather than a fixed desktop offset. */
+  left: calc(0px - var(--timeline-spine-offset) - 0.21rem - 0.75px);
+}
+
+#updates .timeline > li::before,
+#updates .timeline-points li::before {
+  background: #3046d3;
 }
 
 .timeline-period,
@@ -945,28 +961,25 @@ a {
   padding-bottom: 1.6rem;
 }
 
-.talk-inline {
+.content-section h2.talk-inline {
   margin: 0;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  gap: 0.34rem;
-  align-items: baseline;
-  color: #5f6a83;
-  font-size: 1.12rem;
-  font-style: italic;
-  line-height: 1.1;
+  color: var(--text);
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.talk-inline span,
+.talk-inline a {
+  white-space: nowrap;
 }
 
 .talk-inline a {
   color: var(--accent);
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 5px;
-}
-
-.about-section + .about-section {
-  border-top: 1px solid var(--line);
+  font-weight: inherit;
+  text-decoration: none;
 }
 
 .about-section p {
@@ -999,14 +1012,6 @@ a {
   font-size: 0.98rem;
   line-height: 1.62;
   color: var(--muted);
-}
-
-#papers > .eyebrow {
-  margin: 0 0 0.78rem;
-  padding: 0.55rem 0 0.58rem;
-  border-bottom: 1px solid rgba(74, 79, 243, 0.24);
-  display: block;
-  width: 100%;
 }
 
 .about-chip-row {
@@ -1187,18 +1192,6 @@ a {
   grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
   gap: 1.25rem;
   align-items: center;
-  border-bottom: 0;
-}
-
-#papers {
-  position: relative;
-}
-
-#papers::before {
-  content: '';
-  display: block;
-  border-top: 1px solid var(--line);
-  margin-bottom: 0.78rem;
 }
 
 .research-hero p {
@@ -1613,6 +1606,7 @@ a:focus-visible {
   }
 
   .content-section {
+    --section-inline-padding: 1.2rem;
     padding: 1.2rem;
   }
 
@@ -1629,9 +1623,6 @@ a:focus-visible {
     gap: 0.15rem;
   }
 
-  .talk-inline {
-    font-size: 1rem;
-  }
 }
 
 @media (max-width: 560px) {
@@ -1641,6 +1632,7 @@ a:focus-visible {
   }
 
   .content-section {
+    --section-inline-padding: 1rem;
     padding: 1rem;
   }
 
@@ -1683,6 +1675,10 @@ a:focus-visible {
     padding-left: 0.8rem;
   }
 
+  #updates .timeline {
+    --timeline-spine-offset: 0.8rem;
+  }
+
   .timeline > li {
     padding-left: 0.75rem;
   }
@@ -1718,6 +1714,7 @@ a:focus-visible {
   }
 
   .content-section {
+    --section-inline-padding: 0.9rem;
     padding: 0.9rem;
   }
 
@@ -1746,9 +1743,6 @@ a:focus-visible {
     font-size: 0.98rem;
   }
 
-  .talk-inline {
-    font-size: 0.94rem;
-  }
 }
 
 @media (max-width: 320px) {
@@ -1777,6 +1771,7 @@ a:focus-visible {
   }
 
   .content-section {
+    --section-inline-padding: 0.8rem;
     padding: 0.8rem;
   }
 
@@ -1802,9 +1797,6 @@ a:focus-visible {
     height: 0.92rem;
   }
 
-  .talk-inline {
-    gap: 0.2rem;
-  }
 }
 
 @media (min-width: 1031px) and (max-height: 900px) {
@@ -1819,4 +1811,51 @@ a:focus-visible {
   .profile-card {
     position: static;
   }
+}
+
+/* Matching grids for engineering capabilities and technical skills. */
+.capability-grid,
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 0.75rem;
+}
+
+.about-work-line {
+  flex-wrap: wrap;
+}
+
+:root[data-theme='dark'] .about-chip,
+:root[data-theme='dark'] .about-year {
+  color: var(--accent);
+}
+
+@media (max-width: 760px) {
+  .capability-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.research-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.1rem;
+  margin: 0.65rem 0;
+}
+
+.content-section.home-contact .contact-invitation {
+  max-width: 62ch;
+  margin: 0.8rem auto 0;
+  font-size: 0.9rem;
+}
+
+.content-section > .eyebrow {
+  margin: 0 0 0.8rem;
+}
+
+:root[data-theme='dark'] .content-section p.eyebrow.eyebrow-full {
+  color: var(--accent);
 }
